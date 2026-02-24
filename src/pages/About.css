@@ -1,0 +1,173 @@
+.about {
+  min-height: 100vh;
+  padding: 10rem 2rem 6rem;
+}
+
+.about-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.page-title .mono {
+  color: var(--accent-blue);
+}
+
+/* About Content - Single Column */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-profile-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  flex-shrink: 0;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  line-height: 1.9;
+}
+
+.about-section .highlight {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.about-social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.about-social .social-links {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-top: 6rem;
+  padding-top: 5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.experience-section .section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.experience-section .section-title .mono {
+  color: var(--accent-blue);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.exp-role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.exp-period {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.exp-company {
+  font-size: 1rem;
+  color: var(--accent-blue);
+  font-weight: 500;
+}
+
+.exp-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-top: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-title {
+    text-align: center;
+  }
+
+  .about-profile-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .about {
+    padding: 8rem 1rem 4rem;
+  }
+
+  .page-title {
+    font-size: 2.25rem;
+  }
+
+  .about-section p {
+    font-size: 1.05rem;
+  }
+}

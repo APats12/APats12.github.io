@@ -1,0 +1,163 @@
+.iterm {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  cursor: text;
+}
+
+/* Header */
+.iterm-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+  user-select: none;
+}
+
+.iterm-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.iterm-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.iterm-btn.red    { background: #ff5f56; }
+.iterm-btn.yellow { background: #ffbd2e; }
+.iterm-btn.green  { background: #27c93f; }
+
+.iterm-title {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* Body */
+.iterm-body {
+  padding: 1rem;
+  min-height: 320px;
+  max-height: 420px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* History blocks */
+.iterm-block {
+  margin-bottom: 0.1rem;
+}
+
+.iterm-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* System / welcome */
+.iterm-system .iterm-row,
+.iterm-system .iterm-out-row {
+  color: var(--terminal-green);
+}
+
+/* Output */
+.iterm-output .iterm-out-row {
+  color: var(--text-secondary);
+  padding-left: 0.25rem;
+}
+
+/* Error */
+.iterm-error .iterm-out-row {
+  color: #e06c75;
+}
+
+/* Input echo */
+.iterm-prompt {
+  color: var(--terminal-green);
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.iterm-cmd {
+  color: var(--text-primary);
+}
+
+/* Live input row */
+.iterm-input-row {
+  margin-top: 0.25rem;
+}
+
+.iterm-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Ghost text mirrors the input value for layout */
+.iterm-input-ghost {
+  color: var(--text-primary);
+  white-space: pre;
+  pointer-events: none;
+}
+
+/* Blinking cursor sits right after ghost text */
+.iterm-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: var(--accent-blue);
+  opacity: 0.85;
+  margin-left: 1px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+  flex-shrink: 0;
+}
+
+/* Real input is invisible but positioned to capture typing */
+.iterm-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: transparent;
+  caret-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+/* Scrollbar inside terminal */
+.iterm-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.iterm-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.iterm-body::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .iterm {
+    max-width: 100%;
+  }
+}
