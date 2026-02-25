@@ -19,6 +19,19 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    name: 'GymIQ',
+    description: 'End-to-end RAG pipeline that pulls and synthesizes fitness and supplement research from 65,000+ PubMed abstracts and exercise records.',
+    category: 'AI / Full-Stack',
+    bullets: [
+      'Built an end-to-end RAG pipeline indexing 65,473 dense vectors from PubMed abstracts and exercise records into a Pinecone serverless vector store using all-MiniLM-L6-v2 embeddings',
+      'Designed a multi-source data ingestion system using NCBI E-utilities and ExerciseDB APIs with semantic chunking for real-time conflict-aware answer synthesis via LLaMA 3.3 70B (Groq)',
+      'Deployed a Streamlit app on Community Cloud with a "Gym Bro Mode" that retranslates scientific findings into casual language',
+    ],
+    technologies: ['Python', 'Streamlit', 'Pinecone', 'Groq API', 'sentence-transformers', 'NCBI API'],
+    github: 'https://github.com/APats12/GymIQ',
+  },
+  {
+    id: 4,
     name: 'Twitter Hate Speech Detector',
     description: 'NLP model to classify hate and offensive speech in tweets with TF-IDF and Logistic Regression.',
     category: 'ML / NLP',
@@ -31,7 +44,7 @@ const projects: Project[] = [
     github: 'https://github.com/APats12',
   },
   {
-    id: 3,
+    id: 5,
     name: 'Multi-Threaded HTTP Server',
     description: 'Concurrent HTTP server handling GET/PUT requests with pthreads and dynamic queues.',
     category: 'Systems',
